@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name           AndroidOrArduino
 // @namespace      org.maripo.neta
+// @description    AndroidとArduinoの空目を防止する
 // @include        *
 // ==/UserScript==
 
