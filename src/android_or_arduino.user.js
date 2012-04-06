@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           AndroidOrArduino
-// @namespace      jp.maripo.neta
+// @namespace      org.maripo.neta
 // @include        *
 // ==/UserScript==
 
@@ -13,8 +13,8 @@
 			if ('\#text'==item.nodeName) {
 				if (item.data) {
 					item.data = item.data
-						.replace(new RegExp('[Aa][Rr][Dd][Uu][Ii][Nn][Oo]','g'),function (all, matched){return ''+all+'('+STRING_ARDUINO+')'})
-						.replace(new RegExp('[Aa][Nn][Dd][Rr][Oo][Ii][Dd]','g'),function (all, matched){return ''+all+'('+STRING_ANDROID+')'});
+						.replace(new RegExp('arduino','ig'),function (all, matched){return ''+all+'('+STRING_ARDUINO+')'})
+						.replace(new RegExp('android','ig'),function (all, matched){return ''+all+'('+STRING_ANDROID+')'});
 				} 
 			} else  if ('TEXTAREA'!=item.nodeName && item.childNodes){
 				crawlTree (item);
